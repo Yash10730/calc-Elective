@@ -111,8 +111,8 @@ function readInputValues2() {
     const assignmentValue3 = parseFloat(document.getElementById('Assignment3').value) || 0;
     const quizValue1 = parseFloat(document.getElementById('Quiz1').value) || 0;
     const quizValue2 = parseFloat(document.getElementById('Quiz2').value) || 0;
-    const surpriseValue = parseFloat(document.getElementById('Surprise').value) || 0;
-    const attendanceValue = parseFloat(document.getElementById('Attendance').value) || 0;
+    const surpriseValue = parseFloat(document.getElementById('Surprise1').value) || 0;
+    const attendanceValue = parseFloat(document.getElementById('Attendance1').value) || 0;
 
     console.log("Assignment 1:", assignmentValue1);
     console.log("Assignment 2:", assignmentValue2);
@@ -123,9 +123,13 @@ function readInputValues2() {
     console.log("Attendance:", attendanceValue);
 
     let assignment = ((assignmentValue1 + assignmentValue2 + assignmentValue3) / 60) * 18;
-    let quiz = ((quizValue1 + quizValue2) / 30) * 16; // Corrected the parenthesis
+    console.log(assignment);
+    let quiz = ((quizValue1 + quizValue2) / 30) * 16;
+    console.log(quiz);
     let surprise = (surpriseValue / 10) * 4;
+    console.log(surprise);
     let attendance = (attendanceValue / 2) * 2;
+    console.log(attendance);
 
     let totalTheory = 0;
     // Assuming mstmarks is defined elsewhere and holds the MST marks
